@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { User } from "../types";
 
-const dataPath = path.join(__dirname, "../data/users.json");
+const dataPath = path.join(process.cwd(), "src/data/users.json");
 
 export class UserRepository {
     private async readData(): Promise<User[]> {

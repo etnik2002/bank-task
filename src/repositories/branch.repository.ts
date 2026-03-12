@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { Branch } from "../types";
 
-const dataPath = path.join(__dirname, "../data/branches.json");
+const dataPath = path.join(process.cwd(), "src/data/branches.json");
 
 export class BranchRepository {
     private async readData(): Promise<Branch[]> {
